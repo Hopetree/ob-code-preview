@@ -1,0 +1,123 @@
+/* ===== 代码预览视图 ===== */
+
+.code-preview-view {
+	padding: var(--size-4-2);
+	overflow: auto;
+}
+
+.code-preview-view pre {
+	background: var(--background-secondary);
+	padding: var(--size-4-3);
+	border-radius: var(--radius-s);
+	font-family: var(--font-monospace);
+	font-size: var(--font-ui-smaller);
+	line-height: 1.6;
+	overflow: auto;
+	margin: 0;
+}
+
+.code-preview-view pre code {
+	font-family: var(--font-monospace);
+	background: none;
+	padding: 0;
+}
+
+/* ===== 设置页输入框 ===== */
+
+.code-preview-extensions-input {
+	width: 100%;
+	font-family: var(--font-monospace);
+}
+
+/* ===== highlight.js 令牌配色（深色主题） ===== */
+
+body.theme-dark .code-preview-view .hljs-keyword,
+body.theme-dark .code-preview-view .hljs-selector-tag {
+	color: #c586c0;
+}
+
+body.theme-dark .code-preview-view .hljs-string,
+body.theme-dark .code-preview-view .hljs-attr,
+body.theme-dark .code-preview-view .hljs-template-tag,
+body.theme-dark .code-preview-view .hljs-template-variable {
+	color: #ce9178;
+}
+
+body.theme-dark .code-preview-view .hljs-comment,
+body.theme-dark .code-preview-view .hljs-quote {
+	color: #6a9955;
+	font-style: italic;
+}
+
+body.theme-dark .code-preview-view .hljs-number,
+body.theme-dark .code-preview-view .hljs-literal,
+body.theme-dark .code-preview-view .hljs-symbol,
+body.theme-dark .code-preview-view .hljs-bullet {
+	color: #b5cea8;
+}
+
+body.theme-dark .code-preview-view .hljs-title,
+body.theme-dark .code-preview-view .hljs-title.function_,
+body.theme-dark .code-preview-view .hljs-function .hljs-title {
+	color: #dcdcaa;
+}
+
+body.theme-dark .code-preview-view .hljs-built_in,
+body.theme-dark .code-preview-view .hljs-type,
+body.theme-dark .code-preview-view .hljs-class .hljs-title {
+	color: #4ec9b0;
+}
+
+body.theme-dark .code-preview-view .hljs-variable,
+body.theme-dark .code-preview-view .hljs-parameter {
+	color: #9cdcfe;
+}
+
+body.theme-dark .code-preview-view .hljs-meta,
+body.theme-dark .code-preview-view .hljs-section {
+	color: #569cd6;
+}
+
+/* ===== highlight.js 令牌配色（浅色主题） ===== */
+
+body.theme-light .code-preview-view .hljs-keyword,
+body.theme-light .code-preview-view .hljs-selector-tag {
+	color: #a626a4;
+}
+
+body.theme-light .code-preview-view .hljs-string,
+body.theme-light .code-preview-view .hljs-attr,
+body.theme-light .code-preview-view .hljs-template-tag,
+body.theme-light .code-preview-view .hljs-template-variable {
+	color: #50a14f;
+}
+
+body.theme-light .code-preview-view .hljs-comment,
+body.theme-light .code-preview-view .hljs-quote {
+	color: #a0a1a7;
+	font-style: italic;
+}
+
+body.theme-light .code-preview-view .hljs-number,
+body.theme-light .code-preview-view .hljs-literal,
+body.theme-light .code-preview-view .hljs-symbol,
+body.theme-light .code-preview-view .hljs-bullet {
+	color: #986801;
+}
+
+body.theme-light .code-preview-view .hljs-title,
+body.theme-light .code-preview-view .hljs-title.function_,
+body.theme-light .code-preview-view .hljs-function .hljs-title {
+	color: #4078f2;
+}
+
+body.theme-light .code-preview-view .hljs-built_in,
+body.theme-light .code-preview-view .hljs-type,
+body.theme-light .code-preview-view .hljs-class .hljs-title {
+	color: #c18401;
+}
+
+body.theme-light .code-preview-view .hljs-variable,
+body.theme-light .code-preview-view .hljs-parameter {
+	color: #383a42;
+}

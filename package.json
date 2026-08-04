@@ -1,0 +1,29 @@
+{
+	"name": "ob-code-preview",
+	"version": "1.0.0",
+	"description": "在 Obsidian 中直接查看代码文件（.sh/.py/.yaml 等），按代码块渲染并语法高亮，只读预览。",
+	"main": "main.js",
+	"scripts": {
+		"dev": "node esbuild.config.mjs",
+		"build": "tsc -noEmit -skipLibCheck && node esbuild.config.mjs production",
+		"version": "node version-bump.mjs && git add manifest.json versions.json"
+	},
+	"keywords": [
+		"obsidian",
+		"code",
+		"preview"
+	],
+	"author": "",
+	"license": "MIT",
+	"devDependencies": {
+		"@types/node": "^20.0.0",
+		"builtin-modules": "^3.3.0",
+		"esbuild": "^0.17.3",
+		"obsidian": "latest",
+		"tslib": "^2.6.2",
+		"typescript": "^4.7.4"
+	},
+	"dependencies": {
+		"highlight.js": "^11.11.1"
+	}
+}
