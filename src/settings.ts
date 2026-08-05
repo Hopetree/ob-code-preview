@@ -17,6 +17,21 @@ export class CodePreviewSettingTab extends PluginSettingTab {
 		containerEl.empty();
 
 		new Setting(containerEl)
+			.setName("字体大小")
+			.setDesc("代码预览区域字体大小（像素），拖动实时生效。")
+			.addSlider((slider) =>
+				slider
+					.setLimits(10, 28, 1)
+					.setValue(this.plugin.settings.fontSize)
+					.setDynamicTooltip()
+					.onChange(async (value) => {
+						this.plugin.settings.fontSize = value;
+						await this.plugin.saveSettings();
+						this.plugin.applyFontSize();
+					})
+			);
+
+		new Setting(containerEl)
 			.setName("接管文件扩展名")
 			.setDesc("每行一个扩展名，可带或不带前导点（如 py 或 .py）。保存后立即生效。");
 

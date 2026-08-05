@@ -7,10 +7,13 @@ import { CodePreviewSettingTab } from "./settings";
 interface CodePreviewSettings {
 	/** 被代码预览视图接管的文件扩展名（不带前导点） */
 	extensions: string[];
+	/** 代码预览字体大小（px） */
+	fontSize: number;
 }
 
 const DEFAULT_SETTINGS: CodePreviewSettings = {
 	extensions: [...DEFAULT_EXTENSIONS],
+	fontSize: 16,
 };
 
 /**
@@ -37,8 +40,19 @@ export default class CodePreviewPlugin extends Plugin {
 
 		this.registerView(VIEW_TYPE, (leaf) => new CodePreviewView(leaf));
 		this.applyExtensions();
+		this.applyFontSize();
 
 		this.addSettingTab(new CodePreviewSettingTab(this.app, this));
+	}
+
+	/**
+	 * 把当前字体大小写到 body 的 CSS 变量上，所有已打开的代码预览视图实时生效。
+	 */
+	applyFontSize(): void {
+		document.body.style.setProperty(
+			"--code-preview-font-size",
+			`${this.settings.fontSize}px`
+		);
 	}
 
 	async onunload(): Promise<void> {

@@ -1,7 +1,7 @@
 {
 	"id": "ob-code-preview",
 	"name": "Code Preview",
-	"version": "1.0.1",
+	"version": "1.0.2",
 	"minAppVersion": "1.0.0",
 	"description": "在 Obsidian 中直接查看代码文件（.sh/.py/.yaml/.ini 等），按代码块渲染并语法高亮，只读预览。",
 	"author": "",
